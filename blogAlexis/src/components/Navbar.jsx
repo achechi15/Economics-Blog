@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { menu, close, logo, en, es } from '../assets';
-
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -13,13 +13,13 @@ export const Navbar = () => {
         <div className='w-full h-[80px] z-10 bg-white fixed drop-shadow-lg relative'>
             <div className='flex justify-between items-center w-full h-full md:max-w-[1240px] m-auto'>
                 <div className='flex items-center'>
-                    <img src={logo} alt="logo" className='xxs:ml-4 sm:ml-10 ss:ml-10 md:ml-3 opacity-[80%] w-full h-[25px]' />
+                    <img src={logo} alt="logo" className='xxs:ml-4 sm:ml-10 ss:ml-10 md:ml-3 opacity-[100%] w-full h-[25px]' />
                 </div>
 
                 <div className='flex items-center'>
                     <ul className='hidden md:flex'>
-                        <li>Home</li>
-                        <li>About</li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/blog/1'>About</Link></li>
                     </ul>
                 </div>
 
