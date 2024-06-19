@@ -10,12 +10,13 @@ export const useFetch = (url) => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const res = await fetch(url)
-                const json = await res.json()
-                setData(json)
-                setLoading(false)
+                const res = await fetch(url);
+                const json = await res.json();
+                setData(json);
+                setLoading(false);
             } catch (error) {
-                setError(true)
+                setError(true);
+                setLoading(false);
             }
         }
 

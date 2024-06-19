@@ -1,10 +1,10 @@
 import { Navbar, Footer, BlogCont } from "../components"
 
-export const BlogContentPage = () => {
+export const BlogContentPage = ({ blogs }) => {
     return (
         <>
             <Navbar />
-            <BlogCont />
+            <BlogCont blogs={blogs?blogs: ""} />
             <Footer />
         </>
     )

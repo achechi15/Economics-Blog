@@ -1,10 +1,11 @@
 import { Navbar, Blogs, Footer } from "../components"
 
-export const Homepages = () => {
+export const Homepages = ({ blogs }) => {
+
     return (
         <>
             <Navbar />
-            <Blogs />
+            <Blogs blogs={blogs?blogs:""} />
             <Footer />
         </>
     )
